@@ -1,0 +1,13 @@
+.container{
+    padding-top: 1rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.icon{
+    justify-content: center;
+}
