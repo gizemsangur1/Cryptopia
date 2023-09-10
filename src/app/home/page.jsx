@@ -5,7 +5,7 @@ import { Grid } from "@mui/material";
 import Crypto from "@/components/crypto/Crypto";
 const First = () => {
   return (
-    <Grid container className={styles.main}>
+    <Grid container className={styles.main} id="first">
       <Grid container direction="row" className={styles.container}>
         <Grid item xs={2}>
           <img src="bitco.png" alt="bitcoin" className={styles.bitcoin} />

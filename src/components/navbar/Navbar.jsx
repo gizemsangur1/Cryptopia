@@ -3,7 +3,31 @@ import React, { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import { Grid } from "@mui/material";
 import { BsTwitter, BsDiscord } from "react-icons/bs";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 const Navbar = () => {
+
+  const navlinks = [
+    {
+      id: 1,
+      title: "Home",
+      url: "first",
+    },
+    {
+      id: 2,
+      title: "Market",
+      url: "market",
+    },
+    {
+      id: 3,
+      title: "Choose Us",
+      url: "chooseus",
+    },
+    {
+      id:4,
+      title:"Join",
+      url:"join"
+    }
+  ];
 
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
@@ -29,18 +53,18 @@ const Navbar = () => {
       </Grid>
       <Grid item xs={7} sx={{ alignItems: "center" }}>
         <Grid container sx={{ justifyContent:"center"}}>
-          <Grid item xs={3}>
-            <a>Home</a>
-          </Grid>
-          <Grid item xs={3}>
-            <a>Market</a>
-          </Grid>
-          <Grid item xs={3}>
-            <a>Choose Us</a>
-          </Grid>
-          <Grid item xs={3}>
-            <a>Join</a>
-          </Grid>
+        {navlinks.map((item) => (
+            <Grid item xs={3}  key={item.id}>
+             <ScrollLink
+                to={item.url} 
+                smooth={true}
+                offset={-70} 
+                className={styles.link}
+              >
+                {item.title}
+              </ScrollLink>
+            </Grid>
+          ))}
         </Grid>
       </Grid>
       <Grid item xs={2}>

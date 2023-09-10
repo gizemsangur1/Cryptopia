@@ -1,7 +1,7 @@
 .container{
     padding-top: 1rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     padding-bottom: 1rem;
     justify-content: center;
     align-items: center;
@@ -11,4 +11,14 @@
 
 .icon{
     justify-content: center;
+}
+
+.link{
+    font-size: 25px;
+}
+
+.link:hover{
+    background: linear-gradient(93deg, rgba(15,33,162,1) 0%, rgba(101,18,155,1) 63%, rgba(191,20,182,1) 100%, rgba(0,212,255,1) 100%, rgba(0,0,0,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
