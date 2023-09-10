@@ -25,6 +25,7 @@ const First = () => {
         <Grid item xs={2}></Grid>
       </Grid>
       <Grid container direction="row" className={styles.container}>
+        
         <Crypto/>
       </Grid>
     </Grid>
