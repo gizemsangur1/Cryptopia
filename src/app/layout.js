@@ -3,6 +3,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import First from "./home/page";
 import ChooseUs from "./chooseus/page";
+import Join from "./join/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +15,9 @@ export default function RootLayout({ children }) {
           <Navbar />
         </div>
         <div className="main">
-          <First id="first" />
+          <First id="first" />         
           <ChooseUs className="chooseus" />
+          <Join className="join"/>
         </div>
         
       </body>

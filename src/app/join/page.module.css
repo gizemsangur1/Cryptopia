@@ -1,26 +1,30 @@
-.main{
-    margin-top: 150px;
-    margin-bottom: 150px;
-}
-
 .container{
-    width: 100%;
+    margin: 0px 0px 150px  0px ;
     justify-content: center;
     align-items: center;
     text-align: center;
+    color:white;
 }
 
 .title{
-   color: white;
-   font-size: 85px;
+    font-size: 85px;
 }
 
 .title2{
     font-size: 85px;
     background: linear-gradient(93deg, rgba(15,33,162,1) 0%, rgba(101,18,155,1) 63%, rgba(191,20,182,1) 100%, rgba(0,212,255,1) 100%, rgba(0,0,0,1) 100%);
-  -webkit-background-clip: text;
-  background-clip:none;
-  color: transparent;
+    -webkit-background-clip: text;
+    background-clip:none;
+    color: transparent;
+}
+
+.text{
+    font-size: 36px;
+}
+
+.button{
+    padding: 10px 15px 10px 15px;
+    border-radius: 35px;
 }
 
 .bitcoin{

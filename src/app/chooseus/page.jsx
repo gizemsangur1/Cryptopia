@@ -38,7 +38,7 @@ const ChooseUs = () => {
     },
   ];
   return (
-    <Grid container className="chooseus">
+    <Grid container className="chooseus" sx={{marginBottom:"150px"}}>
       <Grid container sx={{ justifyContent: "center" }}>
         <h1 style={{ marginRight: "10px" }} className={styles.title}>
           WHY
