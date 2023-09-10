@@ -1,10 +1,29 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import { Grid } from "@mui/material";
 import { BsTwitter, BsDiscord } from "react-icons/bs";
 const Navbar = () => {
+
+  const [scrollPercentage, setScrollPercentage] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const currentScroll = window.scrollY;
+      const scrollFraction = currentScroll / totalHeight;
+      setScrollPercentage(scrollFraction * 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <Grid container direction="row" className={styles.container}>
+    <Grid container direction="row" sx={scrollPercentage >= 50 ?{backgroundColor:"#0F0620"}:{backgroundColor:"#091153"}} className={styles.container}>
       <Grid item xs={3}>
         <h1>CRYPTOPIA</h1>
       </Grid>
