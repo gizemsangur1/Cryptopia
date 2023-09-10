@@ -1,0 +1,17 @@
+.title{
+    margin-right: 10px;
+    font-size: 75px;
+    color:white;
+}
+
+.title2{
+    font-size: 75px;
+    background: linear-gradient(93deg, rgba(15,33,162,1) 0%, rgba(101,18,155,1) 63%, rgba(191,20,182,1) 100%, rgba(0,212,255,1) 100%, rgba(0,0,0,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.img{
+  position: relative;
+  top: 25%;
+}
