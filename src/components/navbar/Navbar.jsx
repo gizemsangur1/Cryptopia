@@ -47,7 +47,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Grid container direction="row" sx={scrollPercentage >= 50 ?{backgroundColor:"#0F0620"}:{backgroundColor:"#091153"}} className={styles.container}>
+    <Grid container direction="row" sx={scrollPercentage >= 15 ?{backgroundColor:"#0f051d"}:{backgroundColor:"#09104D"}} className={styles.container}>
       <Grid item xs={3}>
         <h1>CRYPTOPIA</h1>
       </Grid>

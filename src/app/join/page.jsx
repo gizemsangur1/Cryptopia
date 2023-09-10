@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from "./page.module.css"
-import { Grid } from '@mui/material'
+import { Button, Grid } from '@mui/material'
 const Join = () => {
   return (
-    <Grid className='join' sx={{width:"100%"}}>
+    <Grid className='join' sx={{width:"100%",marginBottom:"150px"}}>
       <Grid container className={styles.container}>
         <Grid item xs={2}></Grid>
         <Grid item xs={8}>
@@ -20,7 +20,7 @@ const Join = () => {
                 </Grid>
             </Grid>
             <Grid container sx={{justifyContent:"center",alignItems:"center",marginTop:"50px"}}>
-                <button className={styles.button}>Join via Discord</button>
+                <button link className={styles.button}> <a href="http://discord.com/" className={styles.link} target='_blank'>Join via Discord</a> </button>
             </Grid>
         </Grid>
         <Grid item xs={2}></Grid>

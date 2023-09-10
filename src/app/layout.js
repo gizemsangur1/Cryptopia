@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import First from "./home/page";
 import ChooseUs from "./chooseus/page";
 import Join from "./join/page";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
           <First id="first" />         
           <ChooseUs className="chooseus" />
           <Join className="join"/>
+          <Footer/>
         </div>
         
       </body>
