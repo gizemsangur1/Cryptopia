@@ -23,8 +23,19 @@
 }
 
 .button{
+    width: 250px;
+    height: 70px;
+    color: white;
+    background: linear-gradient(45deg, rgba(15,33,162,1) 0%, rgba(101,18,155,1) 63%, rgba(191,20,182,1) 100%, rgba(0,212,255,1) 100%, rgba(0,0,0,1) 100%);
+    border: none;
+    box-shadow: 0px 10px 30px 0px #64039c59;
+    font-size: 25px;
     padding: 10px 15px 10px 15px;
     border-radius: 35px;
+}
+
+.button:hover{
+    box-shadow: 0px 15px 60px 0px #64039c59;
 }
 
 .bitcoin{
