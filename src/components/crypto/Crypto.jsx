@@ -19,7 +19,7 @@ const Crypto = () => {
 
         setCurrencies(data);
         setLoading(false);
-        console.log(currencies);
+        
       } catch (error) {
         console.log("failed to fetch data:" + error);
         setLoading(true);
@@ -53,12 +53,12 @@ const Crypto = () => {
                     <h2 style={{ marginRight: "2px" }}>{coin.name}</h2>
                     <h2
                       style={
-                        coin.market_cap_change_percentage_24h < 0
+                        coin.price_change_percentage_24h < 0
                           ? { color: "red" }
                           : { color: "green" }
                       }
                     >
-                      {coin.market_cap_change_percentage_24h}%
+                      {coin.price_change_percentage_24h}%
                     </h2>
                   </Grid>
                   <Grid container direction="row" className={styles.container}>

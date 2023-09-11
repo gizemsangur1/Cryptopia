@@ -5,6 +5,7 @@ import First from "./home/page";
 import ChooseUs from "./chooseus/page";
 import Join from "./join/page";
 import Footer from "@/components/footer/Footer";
+import Market from "./market/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         </div>
         <div className="main">
           <First id="first" />         
+          <Market className="market"/>
           <ChooseUs className="chooseus" />
           <Join className="join"/>
           <Footer/>
