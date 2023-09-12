@@ -4,7 +4,13 @@ import styles from "./navbar.module.css";
 import { Grid } from "@mui/material";
 import { BsTwitter, BsDiscord } from "react-icons/bs";
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import {GiHamburgerMenu} from "react-icons/gi"
 const Navbar = () => {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleClick = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const navlinks = [
     {
@@ -48,10 +54,10 @@ const Navbar = () => {
 
   return (
     <Grid container direction="row" sx={scrollPercentage >= 15 ?{backgroundColor:"#0f051d"}:{backgroundColor:"#09104D"}} className={styles.container}>
-      <Grid item xs={3}>
+      <Grid item lg={3} md={3} sm={10} xs={10} sx={{textAlign:"start"}}>
         <h1>CRYPTOPIA</h1>
       </Grid>
-      <Grid item xs={7} sx={{ alignItems: "center" }}>
+      <Grid item lg={7} md={7} sx={{ alignItems: "center",display:{lg:"grid",md:"grid",sm:"none",xs:"none"} }}>
         <Grid container sx={{ justifyContent:"center"}}>
         {navlinks.map((item) => (
             <Grid item xs={3}  key={item.id}>
@@ -67,7 +73,7 @@ const Navbar = () => {
           ))}
         </Grid>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item lg={2} md={2} sx={{ alignItems: "center",display:{lg:"grid",md:"grid",sm:"none",xs:"none"} }}>
         <Grid container className={styles.icon} spacing={3}>
           <Grid item>
             <BsTwitter size={25}/>
@@ -77,6 +83,29 @@ const Navbar = () => {
           </Grid>
         </Grid>
       </Grid>
+      <Grid item sm={2} xs={2} sx={{ alignItems: "center",display:{lg:"none",md:"none",sm:"grid",xs:"grid"},justifyContent:"end" }}>
+        <GiHamburgerMenu size={40} color="white" onClick={handleClick}/>
+      </Grid>
+      <Grid container direction="column" sx={{ justifyContent:"center",display: {
+            md: "none",
+            sm: menuOpen ? "inline" : "none",
+            xs: menuOpen ? "inline" : "none",
+            
+          },zIndex:999}}>
+        {navlinks.map((item) => (
+            <Grid item xs={3}  key={item.id}>
+             <ScrollLink
+                to={item.url} 
+                smooth={true}
+                offset={-70} 
+                className={styles.link}
+                onClick={handleClick}
+              >
+                {item.title}
+              </ScrollLink>
+            </Grid>
+          ))}
+        </Grid>
     </Grid>
   );
 };

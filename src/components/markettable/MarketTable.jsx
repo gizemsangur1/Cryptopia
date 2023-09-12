@@ -73,8 +73,8 @@ const MarketTable = () => {
                
                 <td style={{justifyContent:"center"}}>
                   <Grid container sx={{alignItems:"center"}} spacing={2}>
-                    <Grid item xs={6} sx={{textAlign:"end"}}><img src={row.image} width={50} /></Grid>
-                    <Grid item xs={6} sx={{textAlign:"start"}}><p>{row.name} </p></Grid>
+                    <Grid item lg={6} sx={{textAlign:"end",display:{lg:"grid",sm:"none",xs:"none"}}}><img src={row.image} width={50} /></Grid>
+                    <Grid item lg={6} sm={12} xs={12} sx={{textAlign:"start"}}><p>{row.name} </p></Grid>
                   </Grid>
                   
                 </td>
@@ -92,8 +92,8 @@ const MarketTable = () => {
               </tr>
             )}
           </tbody>
-          <tfoot>
-            <tr>
+          <tfoot >
+            <tr >
               <CustomTablePagination
                 rowsPerPageOptions={[10, 25, { label: "All", value: -1 }]}
                 colSpan={3}

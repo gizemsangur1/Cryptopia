@@ -5,8 +5,8 @@ import { BsTwitter, BsDiscord, BsFacebook, BsYoutube } from "react-icons/bs";
 const Footer = () => {
   return (
     <Grid container className={styles.container}>
-      <Grid item xs={4}></Grid>
-      <Grid item xs={4}>
+      <Grid item lg={4} sx={{display:{lg:"grid",sm:"none",xs:"none"}}} ></Grid>
+      <Grid item lg={4} sm={12} xs={12}>
         <Grid container sx={{marginBottom:"15px"}}>
             <Grid item xs={3}>
                 <BsTwitter color="white" size={50}/>
@@ -30,7 +30,7 @@ const Footer = () => {
             </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={4}></Grid>
+      <Grid item lg={4} sx={{display:{lg:"grid",sm:"none",xs:"none"}}}></Grid>
     </Grid>
   );
 };

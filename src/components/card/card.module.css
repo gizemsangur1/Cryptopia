@@ -21,3 +21,28 @@
 .img{
     top: 10px;
 }
+
+.title{
+    font-size: 24px; /* Default font size for xs screens */
+
+  @media (min-width: 600px) {
+    font-size: 36px; /* Font size for sm and lg screens */
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 36px; /* Font size for lg screens */
+  }
+}
+
+.desc{
+    margin-top: 15px;
+    font-size: 16px; /* Default font size for xs screens */
+
+    @media (min-width: 600px) {
+      font-size: 24px; /* Font size for sm and lg screens */
+    }
+  
+    @media (min-width: 1280px) {
+      font-size: 24px; /* Font size for lg screens */
+    }
+}
