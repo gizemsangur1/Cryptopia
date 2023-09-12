@@ -71,15 +71,15 @@ const MarketTable = () => {
             ).map((row) => (
               <tr key={row.name}>
                
-                <td style={{justifyContent:"center"}}>
+                <td style={{justifyContent:"center",width:"33%"}}>
                   <Grid container sx={{alignItems:"center"}} spacing={2}>
-                    <Grid item lg={6} sx={{textAlign:"end",display:{lg:"grid",sm:"none",xs:"none"}}}><img src={row.image} width={50} /></Grid>
+                    <Grid item lg={6} sx={{textAlign:"end",justifyContent:"end",display:{lg:"grid",sm:"none",xs:"none"}}}><img src={row.image} width={50} /></Grid>
                     <Grid item lg={6} sm={12} xs={12} sx={{textAlign:"start"}}><p>{row.name} </p></Grid>
                   </Grid>
                   
                 </td>
-                <td align="right">{row.current_price}</td>
-                <td align="right"  style={
+                <td >{row.current_price}</td>
+                <td  style={
                         row.price_change_percentage_24h < 0
                           ? { color: "red" }
                           : { color: "green" }

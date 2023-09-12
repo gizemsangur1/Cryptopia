@@ -118,7 +118,7 @@ const ChooseUs = () => {
             ))}
           </Grid>
         </Grid>
-        <Grid item sm={12} xs={12}>
+        <Grid item sm={12} xs={12} sx={{ display: { lg: "none", sm: "grid", xs: "grid" } }}>
           <Grid container direction="column" spacing={2}>
             {columnAll.map((card) => (
               <Grid item xs={2}>
