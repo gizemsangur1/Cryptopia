@@ -85,7 +85,7 @@ const ChooseUs = () => {
         >
           <Grid container direction="column">
             {columnFirst.map((card) => (
-              <Grid item xs={4}>
+              <Grid item xs={4} key={card.title}>
                 <Card icon={card.icon} title={card.title} desc={card.desc} />
               </Grid>
             ))}
@@ -112,7 +112,7 @@ const ChooseUs = () => {
         >
           <Grid container direction="column">
             {columnSecond.map((card) => (
-              <Grid item xs={4}>
+              <Grid item xs={4} key={card.title}>
                 <Card icon={card.icon} title={card.title} desc={card.desc} />
               </Grid>
             ))}
@@ -121,7 +121,7 @@ const ChooseUs = () => {
         <Grid item sm={12} xs={12} sx={{ display: { lg: "none", sm: "grid", xs: "grid" } }}>
           <Grid container direction="column" spacing={2}>
             {columnAll.map((card) => (
-              <Grid item xs={2}>
+              <Grid item xs={2} key={card.title}>
                 <Card icon={card.icon} title={card.title} desc={card.desc} />
               </Grid>
             ))}

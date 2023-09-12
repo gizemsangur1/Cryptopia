@@ -1,7 +1,7 @@
 ### Cryptopia
  <p>This is a responsive crypto tracking web site made with Next.js.
  <p>Used coingecko api for fetching the real time crypto market data.
- 
+ <p> To see live [https://cryptopia-gizemsangur1.vercel.app/]
 
 ## Home 
 
